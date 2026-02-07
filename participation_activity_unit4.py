@@ -9,20 +9,9 @@ Criteria:
 """
 
 import random
-counter = 0
-list_int = []
-total_sum = 0
-
-#stores 100 random numbers in the list
-while counter<100:
-    list_int.append(random.randint(0,10))
-    counter+=1
-
-#Adds all numbers in list together
-for number in list_int:
-    total_sum+=number
-    counter+=1
-
+#Using List comprehension
+list_int = [random.randint(1,10) for x in range(100)]
+total_sum = sum(list_int)
 average_value=total_sum/len(list_int)
 
 print(f"The total elements in the list are: {len(list_int)}")
